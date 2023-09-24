@@ -26,7 +26,7 @@ namespace SchoolApp.API
 
             try
             {
-                var context = services.GetRequiredService<StoreContext>();
+                var context = services.GetRequiredService<SchoolContext>();
                 await context.Database.MigrateAsync(); //Update-Database
 
                 

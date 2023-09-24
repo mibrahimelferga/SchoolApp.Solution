@@ -14,7 +14,7 @@ namespace SchoolApp.DAL.Data.Config
         public void Configure(EntityTypeBuilder<Class> builder)
         {
             
-
+            
             builder.HasOne(C => C.Teacher).WithMany(T => T.Classes)
                 .HasForeignKey(C => C.TeacherId);
         }

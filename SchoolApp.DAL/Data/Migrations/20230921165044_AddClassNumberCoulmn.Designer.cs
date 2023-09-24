@@ -9,8 +9,8 @@ using SchoolApp.DAL.Data;
 namespace SchoolApp.DAL.Data.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    [Migration("20230917114938_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230921165044_AddClassNumberCoulmn")]
+    partial class AddClassNumberCoulmn
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,6 +26,9 @@ namespace SchoolApp.DAL.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ClassNumber")
+                        .HasColumnType("int");
 
                     b.Property<int>("TeacherId")
                         .HasColumnType("int");

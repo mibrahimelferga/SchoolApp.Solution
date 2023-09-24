@@ -9,9 +9,9 @@ using System.Reflection;
 
 namespace SchoolApp.DAL.Data
 {
-    public class StoreContext : DbContext
+    public class SchoolContext : DbContext
     {
-        public StoreContext(DbContextOptions<StoreContext> options) : base(options)
+        public SchoolContext(DbContextOptions<SchoolContext> options) : base(options)
         {
 
         }
